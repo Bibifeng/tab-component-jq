@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tab选项卡</title>
+    <link rel="stylesheet" href="css/tab.css">
+    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="js/tab.js"></script>
+</head>
+<body>
+
+<div class="tab js-tab" data-config='{
+"triggerType":"mouseover",
+"effect":"fade",
+"invoke":2,
+"auto":3000
+}'>
+    <ul class="tab-nav">
+        <li class="actived"><a href="#">图一</a></li>
+        <li><a href="#">图二</a></li>
+        <li><a href="#">图三</a></li>
+        <li><a href="#">图四</a></li>
+    </ul>
+
+    <div class="content-wrap">
+        <div class="content-item current">
+            <img src="img/WechatIMG4.jpeg" alt="" width="290px" height="200px">
+        </div>
+        <div class="content-item">
+            <img src="img/WechatIMG5.jpeg" alt="" width="290px" height="200px">
+        </div>
+        <div class="content-item">
+            <img src="img/WechatIMG6.jpeg" alt="" width="290px" height="200px">
+        </div>
+        <div class="content-item">
+            <img src="img/WechatIMG7.jpeg" alt="" width="290px" height="200px">
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(function () {
+       var tab1 =new Tab($(".js-tab").eq(0));
+    });
+</script>
+
+</body>
+</html>
