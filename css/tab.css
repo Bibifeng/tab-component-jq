@@ -9,14 +9,21 @@ a{
     text-decoration: none;
 }
 body{
-    background-color: #323232;
+    background-color: #95bac6;
     font-size:12px;
     font-family:微软雅黑;
     padding:100px;
 }
 
+.tab-content{
+    width: 100%;
+    display: flex;
+    margin-top: 40px;
+}
+
 .tab{
     width: 300px;
+    flex: 1;
 }
 
 .tab .tab-nav{
@@ -26,7 +33,7 @@ body{
 .tab .tab-nav li{
     float: left;
     margin-right:5px;
-    background-color: #767676;
+    background-color: #878787;
     border-radius: 3px 3px 0 0;
 }
 
@@ -49,6 +56,7 @@ body{
 .tab .content-wrap{
     background-color: white;
     padding:5px;
+    width: 290px;
     height: 200px;
 }
 
@@ -58,6 +66,15 @@ body{
     position: absolute;
 }
 
+.content-item img{
+    width: 290px;
+    height: 200px;
+}
+
 .tab .content-wrap .current{
     display: block;
+}
+
+.decs{
+    flex: 1;
 }

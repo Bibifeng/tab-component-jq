@@ -9,32 +9,79 @@
 </head>
 <body>
 
-<div class="tab js-tab" data-config='{
-"triggerType":"mouseover",
+<h2>Tip：通过tab最外层div上的data-config属性进行参数配置</h2>
+
+<div class="tab-content">
+    <!--第一-->
+    <div class="tab js-tab">
+        <ul class="tab-nav">
+            <li class="actived"><a href="#">图一</a></li>
+            <li><a href="#">图二</a></li>
+            <li><a href="#">图三</a></li>
+            <li><a href="#">图四</a></li>
+        </ul>
+
+        <div class="content-wrap">
+            <div class="content-item current">
+                <img src="img/WechatIMG4.jpeg" alt="">
+            </div>
+            <div class="content-item">
+                <img src="img/WechatIMG5.jpeg" alt="">
+            </div>
+            <div class="content-item">
+                <img src="img/WechatIMG6.jpeg" alt="">
+            </div>
+            <div class="content-item">
+                <img src="img/WechatIMG7.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!--第二-->
+    <div class="tab js-tab" data-config='{
+"triggerType":"click",
 "effect":"fade",
 "invoke":2,
 "auto":3000
 }'>
-    <ul class="tab-nav">
-        <li class="actived"><a href="#">图一</a></li>
-        <li><a href="#">图二</a></li>
-        <li><a href="#">图三</a></li>
-        <li><a href="#">图四</a></li>
-    </ul>
+        <ul class="tab-nav">
+            <li class="actived"><a href="#">图一</a></li>
+            <li><a href="#">图二</a></li>
+            <li><a href="#">图三</a></li>
+            <li><a href="#">图四</a></li>
+        </ul>
 
-    <div class="content-wrap">
-        <div class="content-item current">
-            <img src="img/WechatIMG4.jpeg" alt="" width="290px" height="200px">
+        <div class="content-wrap">
+            <div class="content-item current">
+                <img src="img/WechatIMG4.jpeg" alt="">
+            </div>
+            <div class="content-item">
+                <img src="img/WechatIMG5.jpeg" alt="">
+            </div>
+            <div class="content-item">
+                <img src="img/WechatIMG6.jpeg" alt="">
+            </div>
+            <div class="content-item">
+                <img src="img/WechatIMG7.jpeg" alt="">
+            </div>
         </div>
-        <div class="content-item">
-            <img src="img/WechatIMG5.jpeg" alt="" width="290px" height="200px">
-        </div>
-        <div class="content-item">
-            <img src="img/WechatIMG6.jpeg" alt="" width="290px" height="200px">
-        </div>
-        <div class="content-item">
-            <img src="img/WechatIMG7.jpeg" alt="" width="290px" height="200px">
-        </div>
+    </div>
+</div>
+
+<div class="tab-content">
+    <div class="decs">
+        <h3>1.&nbsp;默认参数状态</h3>
+        <p>triggerType：切换触发方式，默认为mouseover</p>
+        <p>effect：切换效果，默认无效果</p>
+        <p>invoke：加载完成先显示第几个选项卡，默认为1</p>
+        <p>auto：是否自动切换，默认为否，若是数字表示开启自动切换，单位ms</p>
+    </div>
+    <div class="decs">
+        <h3>2.&nbsp;人工配置参数:</h3>
+        <p>"triggerType" : "click"</p>
+        <p>"effect" : "fade"</p>
+        <p>"invoke" : 2</p>
+        <p>"auto" : 3000</p>
     </div>
 </div>
 
@@ -42,6 +89,7 @@
 <script>
     $(function () {
        var tab1 =new Tab($(".js-tab").eq(0));
+        var tab2 =new Tab($(".js-tab").eq(1));
     });
 </script>
 
